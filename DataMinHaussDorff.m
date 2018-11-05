@@ -1,6 +1,5 @@
 function [ Feat ] = DataMinHaussDorff( Insts,IP,InstPerBag )
-%UNTITLED2 Summary of this function goes here
-%   Detailed explanation goes here
+% Function to create feature vectors
 
     
     NbInst=size(Insts,1);
