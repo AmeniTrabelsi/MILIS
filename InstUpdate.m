@@ -1,6 +1,5 @@
 function [nS,IPs]=InstUpdate(Data,S,IPs,W,lambda,Insts)
-%UNTITLED2 Summary of this function goes here
-%   Detailed explanation goes here
+
 
     nS=S;
     IPs=IPs;
