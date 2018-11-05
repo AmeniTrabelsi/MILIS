@@ -9,8 +9,19 @@ Multiple Instance Learning with Instance Selection
 
 * All instances contained in the negative bags are modeled by Gaussian-kernel-based kernel density estimator (KDE). For the efficient density estimation for each positive instance, we pick its K-nearest negative instances and evaluate the probability of the positive instance being generated from the negative population. The least negative instance, from each positive bag is selected as the IP.
 For each negative bag, we pick the single instance with the highest likelihood value, so the most negative instance, as the IP.
+
 Number of IPs= number of bags << number of all the training instance (MILES)
 
 * After obtaining the SVM classifier for bag-level features, we can validate the selected IPs and update them accordingly. The MILIS method updates the feature map and the classifier output simultaneously and stop the update process early on if the new feature map yields solutions that depart from the current optimum.
+
+=> We tried Running the implemented algorithm using Random intialization and then using KDE initialization on a synthetic data. The results in reported are with random initialization.
+Iteration 0
+![pipeline](https://github.com/AmeniTrabelsi/MILIS/blob/master/Random%20Init/Iter0.fig)
+Iteration 1
+![pipeline]()
+Iteration 2
+![pipeline]()
+Iteration 5
+![pipeline]()
 
 
