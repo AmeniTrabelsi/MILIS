@@ -33,14 +33,14 @@ end
 
 scatter(Insts(:,1),Insts(:,2))
 
-
+% Compute Distance between instances
 for i=1:length(Insts)
     for j=1:length(Insts)
         Dists(i,j)=sqrt(sum( (Insts(i,:)-Insts(j,:)).^2 ));
     end
 end
 
-
+% Compute Lambda and Beta
 SortedDists=sort(Dists,2);
 Best_Sig=mean(SortedDists(:,20));
 
@@ -48,9 +48,10 @@ lambda=1/(Best_Sig^2);
 beta=lambda;
 
 
-
+% Train
 [IPs, W ]=MILIS_Train(TrainData,TestData,beta,lambda);
 
+% Test
 [Acc,Conf,LblDiff]=MILIS_Test(TestData,TrainData,IPs,W,lambda)
 
 
