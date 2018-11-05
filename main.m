@@ -2,16 +2,10 @@ close all
 clear
 clc
 
-%GenSynth
+%Load generated synthetic Data
 
 load('SyntheticData.mat');
-% load('D:\Users\ameni\Classes\Test_SyntheticData\SynthDataTest2.mat')
-% 
-% for i=21:40
-%     SynthData.Bags(i).Label=-1;
-% end
 
-% Data=SynthData;
 Labels=[Data.Bags(:).Label];
 
 Pos=find(Labels+1);
@@ -20,11 +14,9 @@ Neg=find(1-Labels);
 
 Ratio=0.7;
 
-
+% Split Data into Train and Test Data
 TrainPosIdx=round(0.6*length(Pos));
 TrainNegIdx=round(0.6*length(Neg));
-
-
 Test= [Pos(TrainPosIdx+1:end) Neg(TrainNegIdx+1:end)];
 Train= [Pos(1:TrainPosIdx) Neg(1:TrainNegIdx)];
 
