@@ -1,23 +1,9 @@
 function [res,Conf,LblDiff]=MILIS_Test(TestData,TrainData,IPs,W,Lambda)
-%UNTITLED Summary of this function goes here
-%   Detailed explanation goes here
+
 
     Lbls=[];
     Conf=[];
     
-%     TrainLbls=[TrainData.Bags(:).Label];
-%     
-%     NegLbls=find(TrainLbls-1);
-%     PosLbls=find(TrainLbls+1);
-%     
-%     NbNeg=max(NegLbls)-min(NegLbls);
-%     NbPos=max(PosLbls)-min(PosLbls);
-%     
-%     SelectedNeg=randperm(NbNeg,NbPos);
-%     
-%     NegIPs=sort(NegLbls(SelectedNeg));
-%     
-%     IPsIdx=[PosLbls NegIPs];
     
     
     for i=1:TestData.NbBags
