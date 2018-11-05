@@ -62,14 +62,6 @@ function [ IPs, W, IterIPs,IterW,lambda ] = MILIS_Train( TrainDataSF,TestDataSF,
     end
     
     
-    %IPs=randi(5,Data.NbBags,1);
-
-    
-%     IPs=[];
-%     for i=1:Data.NbBags
-%         IPs=[IPs; randi(Data.Bags(i).NbInst)]
-%     end
-%     
     Dists=zeros(Data.NbBags);
     for i=1:Data.NbBags
         Dists(:,i)=DataMinHaussDorff(Insts,Data.Bags(i).Insts(IPs(i,1),:),LandMineNbInstPerBag);
@@ -98,8 +90,6 @@ function [ IPs, W, IterIPs,IterW,lambda ] = MILIS_Train( TrainDataSF,TestDataSF,
     
     Labels = [Data.Bags(:).Label];
     
-    %rmdir(strcat('..\LM_MILIS_IPs'))
-    %mkdir(strcat('..\LM_MILIS_IPs'))
     
     ChangedIPs=[];
     
