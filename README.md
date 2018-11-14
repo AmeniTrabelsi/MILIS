@@ -1,6 +1,7 @@
 # MILIS
 Multiple Instance Learning with Instance Selection
 
+
 ### Implementation of the Algorithm MILIS from scratch. You can find the original paper MILIS [HERE!](https://ieeexplore.ieee.org/document/5557878?arnumber=5557878)
 
 * This paper proposes an efficient instance selection technique to speed up the training process of a multiple instance learning problem without compromising the performance.
@@ -18,10 +19,10 @@ Number of IPs= number of bags << number of all the training instance (MILES)
 Iteration 0
 ![pipeline](https://github.com/AmeniTrabelsi/MILIS/blob/master/Random%20Init/Iter0.fig)
 Iteration 1
-![pipeline]()
+![pipeline](https://github.com/AmeniTrabelsi/MILIS/blob/master/Random%20Init/Iter0.fig)
 Iteration 2
-![pipeline]()
+![pipeline](https://github.com/AmeniTrabelsi/MILIS/blob/master/Random%20Init/Iter0.fig)
 Iteration 5
-![pipeline]()
+![pipeline](https://github.com/AmeniTrabelsi/MILIS/blob/master/Random%20Init/Iter0.fig)
 
 
